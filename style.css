@@ -1,0 +1,145 @@
+body,
+html {
+  margin: 0;
+  height: 100%;
+  font-size: 18px;
+  font-family: 400;
+  font-family: "Lato", sans-serif;
+  line-height: 1.8em;
+  color: #666;
+}
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #e87533;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f5c64f;
+}
+
+
+.flex {
+  display: flex;
+}
+header {
+  justify-content: space-between;
+  padding: 0px 20px;
+  background-color: rgba(0, 0, 0, 1);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+ul {
+  display: inline-flex;
+  list-style: none;
+  padding: 0 40px;
+  justify-content: center;
+  align-items: center;
+}
+ul li {
+  padding: 0 20px;
+  margin: 0 10px;
+  border-radius: 20px;
+  background-color: #f5c64f;
+  cursor: pointer;
+}
+ul li:hover {
+  background-color: #e87533;
+  color: azure;
+}
+.logo {
+  justify-content: center;
+  align-items: center;
+  padding: 10px 40px;
+  color: #eec96f;
+  cursor: pointer;
+}
+.logo:hover {
+  color: #e87533;
+}
+.Parallax1,
+.Parallax2,
+.Parallax3 {
+  justify-content: center;
+  align-items: center;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  background-repeat: no-repeat;
+  /* 
+    Fixed = parallax
+    Scroll = Normal 
+    */
+  background-attachment: fixed;
+}
+.Parallax1 {
+  background-image: url(images/img1.jpg);
+  min-height: 100%;
+  width: 100%;
+}
+.Parallax2 {
+  background-image: url(images/img2.jpg);
+  min-height: 400px;
+}
+.Parallax3 {
+  background-image: url(images/img3.jpg);
+  min-height: 400px;
+}
+.section{
+    text-align: center;
+    padding: 50px 80px;
+}
+.section-dark{
+    background-color: #86380a;
+    color: #c2c2c2;
+}
+.section-light{
+    background-color: #cc6225;
+    color: #c2c2c2;
+}
+.ptext {
+    color: azure;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 24px;
+    border: 3px solid #cc6225;
+    padding: 4px;
+}
+header .toggle {
+    display: none;
+    color: #e87533;
+}
+.responsive {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    transform: translate(-50%, 50%);
+    position: absolute;
+    top: -75px;
+    left: 48%;
+    row-gap: 1rem;
+    background-color: black;
+    padding: 15px;
+}
+@media (max-width:790px) {
+    .mobile {
+        display: none;
+    }
+  header .toggle {
+        display: block;
+        position: relative;
+        color: #e87533;
+        top: 10px;
+        right: 50px;
+        z-index: 3000;
+    }
+}
+
